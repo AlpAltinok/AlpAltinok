@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @AlpAltinok
-- 👀 I’m interested in writing code especially game software.
+- 👀 I’m interested in writing code especially game developer.
 - 🌱 I’m currently learning c,c#,python.
-- 💞️ I’m looking to collaborate game software.
+- 💞️ I’m looking to collaborate game developer.
 - 📫 How to reach me alp.hsyn.27@gmail.com and 05350510690 phone number.
 
 <!---
