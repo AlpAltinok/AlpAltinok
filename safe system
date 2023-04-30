@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+public class KasaKilit : MonoBehaviour
+{
+    public GameObject panel;
+    public GameObject KasaButton;
+    public GameObject player;
+    public Text PassawordText;
+    public string Passaword;
+    public void kasac()
+    {
+        panel.SetActive(true);
+    }
+    void Start()
+    {
+        
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            KasaButton.SetActive(true);
+        }
+    }
+    public void KeyButton(string key)
+    {
+        PassawordText.text = PassawordText.text + key;
+    }
+    public void ResetPassaword()
+    {
+        PassawordText.text = "";
+    }
+    public void CheckPassaword()
+    {
+        if(PassawordText.text == Passaword)
+        {
+            panel.SetActive(false);
+        }
+        else
+        {
+            ResetPassaword();
+        }
+    }
+    void Update()
+    {
+        
+    }
+}
