@@ -1,0 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Sayac : MonoBehaviour
+{
+    public float zaman;
+    public Text zamantext;
+    static public int hak;
+    public Text haktext;
+    void Start()
+    {
+        
+        hak = PlayerPrefs.GetInt(nameof(hak));
+        zaman = PlayerPrefs.GetFloat(nameof(zaman));
+        haktext.text = "" + hak;
+    
+    }
+
+    
+    void Update()
+    {
+        PlayerPrefs.SetFloat(nameof(zaman), zaman);
+        PlayerPrefs.SetInt(nameof(hak), hak);
+        if (hak < 5)
+        {
+            
+            
+            zaman -= Time.deltaTime;
+            zamantext.text = "" + (int)zaman;
+            if (zaman <= 0)
+            {
+                zaman = 300;
+                zamantext.text = "" + (int)zaman;
+                hak += 1;
+                haktext.text = "" + hak;
+               
+            }
+        }
+    }
+}
